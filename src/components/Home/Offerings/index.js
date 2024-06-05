@@ -1,72 +1,43 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
-import TextAnim from '../../1_MediaAssets/Styles/FadeAnimation.jsx';
-import Mangoes from '../../1_MediaAssets/SectionImages/About1.jpg';
-import Pickles from '../../1_MediaAssets/SectionImages/About3.jpg';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
-const Offerings = () => {
-    return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%', backgroundColor: 'black', flexDirection: 'column' }}>
-            <TextAnim Body={
-                <h1 className='HeaderText' style={{ color: 'white', width: '100%', textAlign: 'center' }}>Our <span className='fontSpecial' style={{ color: '#d49400' }}>Offerings </span></h1>
-            } />
-            <Splide
-                options={{
-                    type: 'loop',
-                    perPage: 4,
-                    perMove: 1,
-                    gap: '30px',
-                    autoplay: true,
-                    pauseOnHover: true,
-                    resetProgress: false,
-                    arrows: true,
-                    pagination: true,
-                    focus: 'center',
-                    breakpoints: {
-                        1630: {
-                            perPage: 3,
-                        },
-                        870: {
-                            perPage: 2,
-                        },
-                        768: {
-                            perPage: 1,
-                        },
-                    },
-                }}
-                style={{ width: '100vw', margin: '20px 0px', background: 'black' }}
-            >
-                <SplideSlide>
-                    <div className='imageZoom' style={{ backgroundImage: `url('${Mangoes}')` }}>
-                        <p style={{ position: 'absolute', top: '20px', right: '0', background: '#d49400', margin: '0', color: 'black', padding: '2px 15px', fontSize: '12px', fontWeight: '900' }}>PKR &nbsp;1000 /-&nbsp;</p>
-                        <p className='fontSpecial' style={{ position: 'absolute', bottom: '0', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)' }}>Khas Aam</p>
-                    </div>
-                </SplideSlide>
+const Yohoo = () => {
+  const slides = [
+    { color: '#FF6347' },
+    { color: '#4682B4' },
+    { color: '#32CD32' },
+    { color: '#9370DB' },
+    { color: '#FFD700' }
+  ];
 
-                <SplideSlide>
-                    <div className='imageZoom' style={{ backgroundImage: `url('${Pickles}')` }}>
-                        <p style={{ position: 'absolute', top: '20px', right: '0', background: '#d49400', margin: '0', color: 'black', padding: '2px 15px', fontSize: '12px', fontWeight: '900' }}>PKR &nbsp;1000 /-&nbsp;</p>
-                        <p className='fontSpecial' style={{ position: 'absolute', bottom: '0', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)' }}>Khas Aam</p>
-                    </div>
-                </SplideSlide>
-
-                <SplideSlide>
-                    <div className='imageZoom' style={{ backgroundImage: `url('${Mangoes}')` }}>
-                        <p style={{ position: 'absolute', top: '20px', right: '0', background: '#d49400', margin: '0', color: 'black', padding: '2px 15px', fontSize: '12px', fontWeight: '900' }}>PKR &nbsp;1000 /-&nbsp;</p>
-                        <p className='fontSpecial' style={{ position: 'absolute', bottom: '0', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)' }}>Khas Aam</p>
-                    </div>
-                </SplideSlide>
-
-                <SplideSlide>
-                    <div className='imageZoom' style={{ backgroundImage: `url('${Pickles}')` }}>
-                        <p style={{ position: 'absolute', top: '20px', right: '0', background: '#d49400', margin: '0', color: 'black', padding: '2px 15px', fontSize: '12px', fontWeight: '900' }}>PKR &nbsp;1000 /-&nbsp;</p>
-                        <p className='fontSpecial' style={{ position: 'absolute', bottom: '0', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)' }}>Khas Aam</p>
-                    </div>
-                </SplideSlide>
-            </Splide>
-        </div>
-    );
+  return (
+    <div className="splide-container">
+      <Splide
+        options={{
+          type: 'slide',
+          rewind: true,
+          width: '100vw', // Set the width to 100vw
+          gap: '1rem', // Add some gap between slides
+          perPage: 3, // Display 3 slides at a time
+          pagination: false,
+          breakpoints: {
+            768: { // Breakpoint for smaller screens
+              perPage: 1, // Display 1 slide at a time for smaller screens
+              fixedWidth: 500,
+              fixedHeight: 500,
+            },
+          },
+        }}
+      >
+        {slides.map((slide, index) => (
+          <SplideSlide key={index}>
+            <div className="slide" style={{ backgroundColor: slide.color }}></div>
+          </SplideSlide>
+        ))}
+      </Splide>
+    </div>
+  );
 };
 
-export default Offerings;
+export default Yohoo;
