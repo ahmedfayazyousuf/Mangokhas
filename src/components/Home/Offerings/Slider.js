@@ -11,7 +11,7 @@ const Slider = () => {
   useEffect(() => {
     const splide = new Splide('.faculty-splide', {
       type: 'loop',
-      perPage: 4, // Display 3 slides per page by default
+      perPage: 4, // Display 3 slides per page by default 
       perMove: 1,
       cover: true,
       height: '450px',

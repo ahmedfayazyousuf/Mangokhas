@@ -312,6 +312,9 @@ nav ul li{
 .imageZoom p {
     font-size: 25px;
 }
+.imageZoomtexty {
+    font-size: 25px;
+}
 
 .testimonial{
     font-size: 2vw;
@@ -361,6 +364,9 @@ nav ul li{
         height: 250px;
     }
     .imageZoom p {
+        font-size: 20px;
+    }
+    .imageZoomtexty {
         font-size: 20px;
     }
 }
