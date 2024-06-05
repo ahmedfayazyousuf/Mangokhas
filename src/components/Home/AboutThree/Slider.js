@@ -51,19 +51,19 @@ const Slider = () => {
           </li>
           
           <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${OceanMallImage}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Ocean Mall</p>
+            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangokhas @ Ocean Mall</p>
           </li>
 
           <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${ForumMall}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Forum Mall</p>
+            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangokhas @ Forum Mall</p>
           </li>
 
           <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${HabbitCity1}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Habbit City</p>
+            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangokhas @ Habbit City</p>
           </li>
           
           <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${HabbitCity2}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Habbit City</p>
+            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangokhas @ Habbit City</p>
           </li>
 
           <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Junejo}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
