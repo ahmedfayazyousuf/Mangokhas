@@ -23,12 +23,18 @@ const Offerings = () => {
                     arrows: true,
                     pagination: true,
                     breakpoints: {
+                        1630: {
+                            perPage: 3,
+                        },
+                        870: {
+                            perPage: 2,
+                        },
                         768: {
                             perPage: 1,
                         },
                     },
                 }}
-                style={{ width: '100vw', background: 'black'}}
+                style={{ width: '100vw', margin: '20px 0px' , background: 'black'}}
             >
                 <SplideSlide>
                     <div className='imageZoom' style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Mangoes}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '400px'}}>
