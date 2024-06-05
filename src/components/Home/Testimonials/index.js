@@ -1,9 +1,11 @@
 import React from 'react';
 import IJ1 from '../../1_MediaAssets/SectionImages/Gallery/Junejo.jpg';
+import Cover from '../../1_MediaAssets/SectionImages/MangoTexture.png';
 import Video from '../../1_MediaAssets/SectionImages/Gallery/IJVideo.mp4';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 const About = () => {
     const testimonials = [
       "Experience Pakistan's finest produce with Mangokhas! Handpicked mangoes from Mirpurkhas' orchards. Supreme quality, peak ripeness, unmatched flavor.",
@@ -35,7 +37,7 @@ const About = () => {
     const testimonialWithQuotationMarks = testimonials.map(testimonial => `"${testimonial}"`);
   
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%', backgroundColor: 'black' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%', backgroundColor: 'black', backgroundImage: `url('${Cover}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover',}}>
         <div className='AboutImgTextDiv'>
   
             <div className='AboutImgHolder'>
