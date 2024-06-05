@@ -127,10 +127,10 @@ nav ul li{
         position: fixed;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: flex-end;
         margin: 0;
-        padding: 20px 0px;
-        width: 60vw;
+        padding: 20px;
+        width:50vw;
         height: 100vh;
         background-color: black;
         top: 0px; 
@@ -140,7 +140,6 @@ nav ul li{
         flex-direction: column;
         z-index: 200;
         gap: 0px;
-        padding-left: 20px;
         background-image: url('../SectionImages/MangoTexture.png');
         background-position: center;
         background-repeat: no-repeat;
