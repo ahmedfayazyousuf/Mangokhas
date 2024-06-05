@@ -16,6 +16,7 @@ const Slider = () => {
       cover: true,
       height: '450px',
       speed: 300,
+      pagination: false, 
       breakpoints: {
         1300: {
           perPage: 3, // Display 3 slides per page

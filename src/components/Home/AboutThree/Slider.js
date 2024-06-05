@@ -22,6 +22,7 @@ const Slider = () => {
       height: '85vh',
       speed: 300,
       gap: 15, 
+      pagination: false, 
       breakpoints: {
         1300: {
           perPage: 3, // Display 3 slides per page
