@@ -297,13 +297,16 @@ nav ul li{
     overflow: hidden;
     transition: transform 0.5s;
     cursor: pointer;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .imageZoom:hover {
     transform: scale(1.05);
 }
 
-.imageZoom p{
+.imageZoom p {
     font-size: 30px;
 }
 
@@ -353,12 +356,8 @@ nav ul li{
     .imageZoom {
         width: 250px;
         height: 250px;
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.5s;
-        cursor: pointer;
     }
-    .imageZoom p{
+    .imageZoom p {
         font-size: 20px;
     }
 }
