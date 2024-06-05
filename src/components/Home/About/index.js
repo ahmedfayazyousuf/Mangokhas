@@ -2,8 +2,7 @@ import React from 'react';
 import About1 from '../../1_MediaAssets/SectionImages/About1.jpg';
 import About2 from '../../1_MediaAssets/SectionImages/About2.jpg';
 import TextAnim from '../../1_MediaAssets/Styles/FadeAnimation.jsx';
-import { NavLink } from 'react-router-dom';
-
+// import { NavLink } from 'react-router-dom';
 
 const About = () => {
 
@@ -22,9 +21,9 @@ const About = () => {
                         <p className='texterpara'>Experience Pakistan's finest produce with Mangokhas, offering premium mangoes sourced from Mirpurkhas' renowned orchards, celebrated for supreme quality. Handpicked at peak ripeness, each mango promises unparalleled flavor. Complementing our fruit selection, we proudly offer premium Shikarpuri Achar. From orchard to table, Mangokhas delivers Pakistan's culinary heritage.</p>
                     }/>
                     <TextAnim Body={
-                        <NavLink to='/UpcomingCourses'>
+                        <a href='https://w.app/s3Pdih' target='_blank' rel="noreferrer noopener">
                             <button style={{marginTop: '10px'}}>Order now</button>
-                        </NavLink>
+                        </a>
                     } />
                 </div>
             </div>
