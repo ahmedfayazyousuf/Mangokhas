@@ -184,6 +184,33 @@ nav ul li{
     transform: translateY(-5px); /* Lift slightly up on hover */
 }
 
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.headerLogos {
+    font-size: 15vw;
+    color: white;
+    animation: fadeInLeft 1.5s ease-in-out;
+    transition: transform 1s ease; /* Smooth transition effect */
+    cursor: pointer;
+    width: 95%;
+    text-align: center;
+}
+
+.headerLogos:hover {
+    transform: translateY(-5px); /* Lift slightly up on hover */
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);

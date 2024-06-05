@@ -12,8 +12,8 @@ const HeroSection = () => {
 
             <h1 className="headerText" style={{ zIndex: '1', fontWeight: '300', margin: '0'}}>Mangokhas</h1>
             <div style={{display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', marginTop: '-2vw', position: 'absolute', bottom: '10px', right: '10px'}}>   
-                <img className="headerText DPhider" style={{ width: '150px'}} alt='Rotator' src={LogoMangokhasRound} /> 
-                <img className="headerText DPhider" style={{ width: '150px'}} alt='Rotator' src={LogoKhaasacharRound} />
+                <img className="headerLogos DPhider" style={{ width: '150px'}} alt='Rotator' src={LogoMangokhasRound} /> 
+                <img className="headerLogos DPhider" style={{ width: '150px'}} alt='Rotator' src={LogoKhaasacharRound} />
             </div>
         </div>
     );
