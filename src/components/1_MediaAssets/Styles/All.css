@@ -364,26 +364,3 @@ nav ul li{
         font-size: 20px;
     }
 }
-
-.splide-container {
-    width: 100vw;
-    overflow: hidden;
-  }
-  
-  .slide {
-    width: 500px;
-    height: 500px;
-    margin-right: 1rem; /* Add margin between slides */
-  }
-  
-  .splide__slide {
-    display: inline-block;
-  }
-  
-  /* Center align slides */
-  .splide__track {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
