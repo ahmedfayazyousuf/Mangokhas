@@ -1,0 +1,311 @@
+html, body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;  
+    margin: 0;
+    padding: 0;
+}
+
+/* BUTTON CSS  */
+button {
+    padding: 10px 40px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* FONT  */
+@font-face{
+    font-family: myFont;
+    src:url('./Fonts/Garet-Book.otf');
+}
+*{
+    font-family: myFont;
+}
+
+@font-face{
+    font-family: myFontBold;
+    src:url('./Fonts/Aire\ Bold\ Std.ttf');
+} 
+h1, .fontSpecial{
+    font-family: myFontBold;
+}
+
+/* TEXT HIGHLIGHT  */
+::selection {
+    background: #d49400;
+    color: #000;
+  }
+
+/* SCROLL BAR  */
+    ::-webkit-scrollbar {
+    display: none;
+}
+
+/* NAVBAR CODE  */
+nav{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 80px;
+    width: 100vw;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    gap: 30px;
+    padding-right: 30px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.nav-link {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #82adff;
+}
+
+.nav-link.active {
+    color: grey;
+}
+
+
+@media (max-width: 858px) {
+    nav{
+        justify-content: flex-start;
+    }
+    .Burger{
+        margin-right: 20px;
+    }
+    .checkbtn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100vw;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+    }
+    .nav-link {
+        font-size: 20px;
+        color: white; 
+    }
+    nav ul {
+        position: fixed;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 20px 0px;
+        width: 70vw;
+        height: calc(100vh - 80px);
+        background: black;
+        top: 0px; 
+        right: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        flex-direction: column;
+        z-index: 200;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px;
+        line-height: 30px;
+        color: white;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+    .nav-link{
+        font-size: 17px;
+    }
+}
+
+/* Home.module.css */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.headerText {
+    font-size: 15vw;
+    color: white;
+    animation: fadeInDown 1.5s ease-in-out;
+    text-align: center;
+    transition: transform 1s ease; /* Smooth transition effect */
+    cursor: pointer;
+}
+
+.headerText:hover {
+    transform: translateY(-5px); /* Lift slightly up on hover */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotator {
+    animation: rotate 30s linear infinite;
+}
+
+
+/* HOME PAGE CAROUSEL VERTICAL  */
+.con {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+.con section {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+}
+.con section:nth-of-type(even) {
+    color: white;
+    height: 100vh;
+}
+
+
+
+/* ABOUT SECTION CSS  */
+.AboutImgTextDiv{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .AboutImgHolder{
+    width: 57%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding: 20px
+  }
+  .AboutTextHolder{
+    width: 43%;
+    display: flex;
+    padding: 20px;
+    text-align: left;
+    flex-direction: column;
+  }
+  .MaxWidthImage{
+    width: 40vw;
+    border-radius: 500px;
+  }
+.HeaderText{
+    font-size: 50px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+
+
+
+.contactdiv{
+    border: 0.5px solid #d49400;
+    gap: 5px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .imagediv{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    border: 0.5px solid #d49400;    
+  } 
+  
+@media screen and (max-width: 1000px) { 
+    .HeaderText{
+        font-size: 27px;
+        width: 95vw;
+    }
+    .AboutImgTextDiv{
+        flex-direction: column;
+    }
+    .AboutImgHolder{
+        width: 100%;
+    }
+    .AboutTextHolder{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .DPhider{
+        display: none;
+    }
+    .MaxWidthImage{
+        width: 60vw;
+    }
+    .texterpara{
+        font-size: 14px;
+        width: 95vw;
+        text-align: center;
+    }
+
+    .imagediv{
+        display: none;
+      }
+    
+      .contactdiv{
+        margin: 20px;
+      }
+}
+
