@@ -5,7 +5,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 import Mangoes from '../../1_MediaAssets/SectionImages/About1.jpg';
 import Pickles from '../../1_MediaAssets/SectionImages/About3.jpg';
 
-const FacultyWidget = () => { 
+const Slider = () => { 
 
   useEffect(() => {
     const splide = new Splide('.faculty-splide', {
@@ -56,7 +56,7 @@ const FacultyWidget = () => {
   );
 }
 
-export default FacultyWidget;
+export default Slider;
 
 // Inject styles into the document
 const styleSheet = document.createElement('style');
@@ -74,22 +74,6 @@ styleSheet.innerHTML = `
   .slide-container img {
     width: 100%;
     height: auto;
-  }
-
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    padding: 10px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .slide-container:hover .overlay {
