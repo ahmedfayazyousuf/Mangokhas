@@ -131,7 +131,8 @@ nav ul li{
         margin: 0;
         padding: 20px 0px;
         width: 70vw;
-        height: calc(100vh - 80px);
+        /* height: calc(100vh - 80px); */
+        height: 100vh;
         background: black;
         top: 0px; 
         right: -100%;
@@ -139,6 +140,7 @@ nav ul li{
         transition: all 0.5s;
         flex-direction: column;
         z-index: 200;
+        gap: 0px;
     }
     nav ul li {
         display: block;
@@ -172,9 +174,10 @@ nav ul li{
     font-size: 15vw;
     color: white;
     animation: fadeInDown 1.5s ease-in-out;
-    text-align: center;
     transition: transform 1s ease; /* Smooth transition effect */
     cursor: pointer;
+    width: 95%;
+    text-align: center;
 }
 
 .headerText:hover {
@@ -250,13 +253,11 @@ nav ul li{
     margin-bottom: -3px;
 }
 
-
-
 .contactdiv{
     border: 0.5px solid #d49400;
-    gap: 5px;
-    width: 500px;
-    height: 500px;
+    gap: 10px;
+    width: 70%;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,12 +265,52 @@ nav ul li{
   }
 
   .imagediv{
-    width: 300px;
-    height: 500px;
+    width: 30%;
+    height: 70vh;
     display: flex;
     border: 0.5px solid #d49400;    
   } 
+
+  input{
+    border: 0.5px solid #d49400;
+    color: #d49400;
+    background: black;
+    padding: 10px;
+    width: 80%;
+}
   
+
+.hoverbw {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    cursor: pointer;
+}
+
+.hoverbw:hover {
+    filter: grayscale(0%);
+}
+
+.imageZoom {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.imageZoom:hover {
+    transform: scale(1.05);
+}
+
+.imageZoom p{
+    font-size: 30px;
+}
+
+.testimonial{
+    font-size: 2vw;
+}
+
 @media screen and (max-width: 1000px) { 
     .HeaderText{
         font-size: 27px;
@@ -299,13 +340,25 @@ nav ul li{
         width: 95vw;
         text-align: center;
     }
-
     .imagediv{
         display: none;
-      }
-    
-      .contactdiv{
+    }
+    .contactdiv{
         margin: 20px;
-      }
+        width: 100%;
+    }
+    .makeColumn{
+        flex-direction: column;
+    }
+    .imageZoom {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+    .imageZoom p{
+        font-size: 20px;
+    }
 }
-

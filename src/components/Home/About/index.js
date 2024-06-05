@@ -4,14 +4,15 @@ import About2 from '../../1_MediaAssets/SectionImages/About2.jpg';
 import TextAnim from '../../1_MediaAssets/Styles/FadeAnimation.jsx';
 import { NavLink } from 'react-router-dom';
 
+
 const About = () => {
 
     return (
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%', backgroundColor: 'black'}}>  
             <div className='AboutImgTextDiv'>         
                 <div className='AboutImgHolder'>
-                    <img src={About1} alt='PawHeart' className='MaxWidthImage'/>
-                    <img src={About2} alt='PawHeart' className='DPhider' style={{height: '20vw', marginLeft: '-120px', width: '20vw', borderRadius: '500px'}}/>
+                    <img src={About1} alt='AboutImage' className='MaxWidthImage'/>
+                    <img src={About2} alt='AboutImage' className='DPhider' style={{height: '20vw', marginLeft: '-120px', width: '20vw', borderRadius: '500px'}}/>
                 </div>
                 <div className='AboutTextHolder'>
                     <TextAnim Body={
