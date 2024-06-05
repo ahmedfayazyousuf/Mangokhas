@@ -300,6 +300,9 @@ nav ul li{
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imageZoom:hover {
