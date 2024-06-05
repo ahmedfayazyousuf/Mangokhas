@@ -79,6 +79,12 @@ const NavbarMain = () => {
           </li>
           <li>
           {/* eslint-disable-next-line  */}
+            <a className="nav-link" style={{ color: 'white', cursor: 'pointer' }} onClick={() => { closeNavvy(); scrollToSection('gallery'); }}>
+              Gallery
+            </a>
+          </li>
+          <li>
+          {/* eslint-disable-next-line  */}
             <a className="nav-link" style={{ color: 'white', cursor: 'pointer' }} onClick={() => { closeNavvy(); scrollToSection('contact'); }}>
               Contact
             </a>

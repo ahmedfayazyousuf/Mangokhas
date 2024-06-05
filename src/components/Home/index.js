@@ -31,7 +31,7 @@ const Home = () => {
                 <Testimonials />
             </section>
 
-            <section style={{background: 'black', height: '100vh', width: '100vw', display:'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <section id='gallery' style={{background: 'black', height: '100vh', width: '100vw', display:'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <AboutThree />
             </section>
 
