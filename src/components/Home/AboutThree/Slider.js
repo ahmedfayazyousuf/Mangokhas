@@ -39,7 +39,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="haha-splide splide" style={{ width: '100vw'}}>
+    <div className="haha-splide splide" style={{ width: '100vw', marginBottom: '20px'}}>
       <div className="splide__track">
         <ul className="splide__list">
           <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${MangoShakeImage}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
