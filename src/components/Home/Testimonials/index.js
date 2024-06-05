@@ -1,7 +1,6 @@
 import React from 'react';
-// import TextAnim from '../../1_MediaAssets/Styles/FadeAnimation.jsx';
-import IJ1 from '../../1_MediaAssets/SectionImages/IJ1.jpg';
-import Video from '../../1_MediaAssets/SectionImages/IJVideo.mp4';
+import IJ1 from '../../1_MediaAssets/SectionImages/Gallery/Junejo.jpg';
+import Video from '../../1_MediaAssets/SectionImages/Gallery/IJVideo.mp4';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

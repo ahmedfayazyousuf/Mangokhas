@@ -8,6 +8,8 @@ import BulkOrderImage from '../../1_MediaAssets/SectionImages/Gallery/BulkOrder.
 import OceanMallImage from '../../1_MediaAssets/SectionImages/Gallery/OceanMall.jpg';
 import HabbitCity1 from '../../1_MediaAssets/SectionImages/Gallery/HabbitCity1.png';
 import HabbitCity2 from '../../1_MediaAssets/SectionImages/Gallery/HabbitCity2.png';
+import Junejo from '../../1_MediaAssets/SectionImages/Gallery/Junejo.jpg';
+import Review from '../../1_MediaAssets/SectionImages/Gallery/Review.jpg';
 
 const Slider = () => { 
 
@@ -39,28 +41,36 @@ const Slider = () => {
     <div className="haha-splide splide" style={{ width: '100vw'}}>
       <div className="splide__track">
         <ul className="splide__list">
-          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${MangoShakeImage}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${MangoShakeImage}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Khas Mango Shake</p>
           </li>
 
-          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${BulkOrderImage}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${BulkOrderImage}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Khas Bulk Order</p>
           </li>
           
-          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${OceanMallImage}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${OceanMallImage}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Ocean Mall</p>
           </li>
 
-          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${ForumMall}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${ForumMall}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Forum Mall</p>
           </li>
 
-          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${HabbitCity1}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${HabbitCity1}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Habbit City</p>
           </li>
           
-          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${HabbitCity2}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${HabbitCity2}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Mangkhas @ Habbit City</p>
+          </li>
+
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Junejo}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Irfan Junejo</p>
+          </li>
+
+          <li className="splide__slide slide-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Review}')`, backgroundPosition: 'top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+            <p className='fontSpecial imageZoomtexty' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>User Review</p>
           </li>
           
         </ul>
