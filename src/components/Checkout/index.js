@@ -21,9 +21,9 @@ const Checkout = () => {
   });
 
   // Define your EmailJS service, template ID, and user ID
-  const serviceID = 'service_jpk4a0n';
-  const templateID = 'template_pas1i84';
-  const userID = 'oBtsBhFsJoL-9rIkB';
+  const serviceID = 'service_mit0js7';
+  const templateID = 'template_jsi4rqa';
+  const userID = 'f1Mp9fplHEsgAnH5_';
 
   const prices = {
     mangoBox5kg: 1800,
