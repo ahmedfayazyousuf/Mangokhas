@@ -95,16 +95,16 @@ const Checkout = () => {
                 <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', gap: '10px', position:'absolute', bottom: '0', width: '100%', background: 'rgba(0,0,0,0.6)', padding: '10px 0px 10px 0px'}}>
                   <p style={{padding: '0', margin: '0', fontSize: '20px', color: 'white'}} className="fontSpecial">Connect with us on: </p>
                   <a href='https://www.instagram.com/mangokhas/' target='_blank' rel="noreferrer noopener" style={{marginBottom: '-4px'}}>
-                    <FaInstagram style={{fontSize: '20px', color: 'white', padding: '0', margin: '0'}}/>
+                    <FaInstagram className="HomeIcon" style={{fontSize: '20px', padding: '0', margin: '0'}}/>
                   </a>
                   <a href='https://www.facebook.com/people/Mango-Khas/100066391855237/' target='_blank' rel="noreferrer noopener" style={{marginBottom: '-4px'}}>
-                    <FaFacebookSquare style={{fontSize: '20px', color: 'white', padding: '0', margin: '0'}}/>
+                    <FaFacebookSquare className="HomeIcon" style={{fontSize: '20px', padding: '0', margin: '0'}}/>
                   </a>
                   <a href='https://w.app/s3Pdih' target='_blank' rel="noreferrer noopener" style={{marginBottom: '-4px'}}>
-                    <FaWhatsapp style={{fontSize: '20px', color: 'white', padding: '0', margin: '0'}}/>
+                    <FaWhatsapp className="HomeIcon" style={{fontSize: '20px', padding: '0', margin: '0'}}/>
                   </a>                  
                   <a href='https://w.app/s3Pdih' target='_blank' rel="noreferrer noopener" style={{marginBottom: '-4px'}}>
-                    <HiOutlineMail style={{fontSize: '23px', color: 'white', padding: '0', margin: '0'}} />
+                    <HiOutlineMail className="HomeIcon" style={{fontSize: '23px', padding: '0', margin: '0'}}/>
                   </a>
                 </div>
               </div>

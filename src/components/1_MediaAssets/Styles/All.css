@@ -380,6 +380,14 @@ nav ul li{
     background-color: black;
 }
 
+.HomeIcon{
+    font-size: 40px;
+    color: white;
+}
+
+.HomeIcon:hover{
+    color: #d49400;
+}
 
 .imageZoom {
     width: 300px;

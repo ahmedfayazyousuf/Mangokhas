@@ -1,3 +1,4 @@
+import { GoHomeFill } from "react-icons/go";
 import '../../1_MediaAssets/Styles/All.css';
 import Burger from '../../1_MediaAssets/BrandImages/Burger.png';
 import React, { useState, useRef, useEffect } from 'react';
@@ -47,9 +48,9 @@ const NavbarTwo = () => {
         </label>
 
         <ul>
-          <li>
+          <li style={{marginTop: '30px'}}>
             <NavLink to="/" className="nav-link" style={{ color: 'white', cursor: 'pointer' }} onClick={() => { closeNavvy(); }}>
-              Home 
+              <GoHomeFill className="HomeIcon"/> 
             </NavLink> 
           </li>
         </ul>
