@@ -360,6 +360,27 @@ nav ul li{
     filter: grayscale(0%);
 }
 
+.leftAboutTwo {
+    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+}
+
+.rightAboutTwo {
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+}
+
+
 .imageZoom {
     width: 300px;
     height: 300px;
@@ -468,6 +489,20 @@ nav ul li{
       
     .ImageZoomDivRight {
         justify-content: center;
+    }
+
+    .leftAboutTwo {
+        /* clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%); */
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        width: 100vw;
+        height: 50vh;
+    }
+    
+    .rightAboutTwo {
+        /* clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0 100%); */
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+        width: 100vw;
+        height: 50vh;
     }
       
 }
