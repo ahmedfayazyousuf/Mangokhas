@@ -1,6 +1,5 @@
 import { GoHomeFill } from "react-icons/go";
 import '../../1_MediaAssets/Styles/All.css';
-import Burger from '../../1_MediaAssets/BrandImages/Burger.png';
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -39,21 +38,17 @@ const NavbarTwo = () => {
       <nav ref={navRef} style={{ zIndex: '100' }}>
         <input type="checkbox" id="check" checked={isChecked} onChange={handleCheckboxChange} />
 
-        <a className="nav-link" style={{margin: '0px 0px 0px 20px', zIndex: '2', cursor: 'pointer'}} href='/'>
+        <a className="nav-link" style={{margin: '0px 0px 0px 20px', zIndex: '2', cursor: 'pointer', position: 'absolute', left: '0'}} href='/'>
           <h1 style={{color: 'white', fontSize: '30px', fontWeight: '300', marginTop: '30px'}}>Mangokhas</h1>
         </a>
 
-        <label htmlFor="check" className="checkbtn">
-          <img src={Burger} alt='Burger' className='Burger' style={{ width: '27px', height: '22px', filter: 'brightness(1000%)' }}></img>
-        </label>
 
-        <ul>
-          <li style={{marginTop: '30px'}}>
+
+          <div style={{marginTop: '30px', position: 'absolute', top: '-10px', right: '15px'}}>
             <NavLink to="/" className="nav-link" style={{ color: 'white', cursor: 'pointer' }} onClick={() => { closeNavvy(); }}>
               <GoHomeFill className="HomeIcon"/> 
             </NavLink> 
-          </li>
-        </ul>
+          </div>
       </nav>
     </>
   );

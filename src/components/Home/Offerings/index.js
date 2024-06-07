@@ -2,6 +2,8 @@ import TextAnim from '../../1_MediaAssets/Styles/FadeAnimation.jsx';
 import React from 'react';
 import Mangoes from '../../1_MediaAssets/SectionImages/About1.jpg';
 import Pickles from '../../1_MediaAssets/SectionImages/About3.jpg';
+import Pickles2 from '../../1_MediaAssets/SectionImages/About5.jpg';
+import Mangoes2 from '../../1_MediaAssets/SectionImages/About6.jpg';
 import { NavLink } from 'react-router-dom';
 
 const Offerings = () => {
@@ -27,11 +29,11 @@ const Offerings = () => {
                 </div>
                 
                 <div className='ImageZoomDivRight'>
-                    <div className='imageZoom' style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Pickles}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+                    <div className='imageZoom' style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Pickles2}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
                         <p style={{position: 'absolute', top: '10px', right: '0', background: '#d49400', margin: '0', color: 'black', padding: '2px 15px', fontSize: '12px', fontWeight: '900'}}>PKR &nbsp;700 /-</p>
                         <p className='fontSpecial' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Khas Premium Achar 1000g</p>
                     </div>
-                    <div className='imageZoom' style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Mangoes}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+                    <div className='imageZoom' style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Mangoes2}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
                         <p style={{position: 'absolute', top: '10px', right: '0', background: '#d49400', margin: '0', color: 'black', padding: '2px 15px', fontSize: '12px', fontWeight: '900'}}>Coming soon</p>
                         <p className='fontSpecial' style={{color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Premium Sindhri 2.5 Kg MangoBox</p>
                     </div>
