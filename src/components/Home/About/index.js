@@ -22,7 +22,7 @@ const About = () => {
                     }/>
                     <TextAnim Body={
                         <a href='https://w.app/s3Pdih' target='_blank' rel="noreferrer noopener">
-                            <button style={{marginTop: '10px'}}>Order now</button>
+                            <button className='buttonMain' style={{marginTop: '10px'}}>Order now</button>
                         </a>
                     } />
                 </div>

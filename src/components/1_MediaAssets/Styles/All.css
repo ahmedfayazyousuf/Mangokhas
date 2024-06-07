@@ -6,8 +6,22 @@ html, body{
     padding: 0;
 }
 
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 /* BUTTON CSS  */
-button {
+.buttonMain {
     padding: 10px 40px;
     border: 1px solid white;
     background-color: black;
@@ -16,8 +30,23 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buttonMain:hover {
     background-color: white;
+    color: black;
+}
+
+.buttonMain2{
+    width: 200px;
+    background: #000;
+    color: #d49400;
+    border: 1px solid #d49400;
+    padding: 10px 40px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.buttonMain2:hover {
+    background-color: #d49400;
     color: black;
 }
 
@@ -43,7 +72,7 @@ h1, .fontSpecial{
     background: #d49400;
     color: #000;
   }
-
+ 
 /* SCROLL BAR  */
     ::-webkit-scrollbar {
     display: none;
@@ -277,37 +306,47 @@ nav ul li{
     width: 40vw;
     border-radius: 500px;
   }
+
 .HeaderText{
     font-size: 50px;
     margin-top: -3px;
     margin-bottom: -3px;
 }
-
-.contactdiv{
+.contactdiv {
     border: 0.5px solid #d49400;
     gap: 10px;
-    width: 70%;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box; /* Add this */
   }
-
-  .imagediv{
-    width: 30%;
-    height: 70vh;
+  
+  .imagediv {
+    width: 100%;
+    height: 400px;
     display: flex;
-    border: 0.5px solid #d49400;    
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #d49400;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../SectionImages/HeroCover.png'); 
+    box-sizing: border-box; /* Add this */
   } 
-
-  input{
+  
+  input, textarea, select {
     border: 0.5px solid #d49400;
     color: #d49400;
     background: black;
     padding: 10px;
-    width: 80%;
-}
+    width: 100%;
+    box-sizing: border-box; /* Add this */
+  }
   
 
 .hoverbw {
@@ -321,8 +360,8 @@ nav ul li{
 }
 
 .imageZoom {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     position: relative;
     overflow: hidden;
     transition: transform 0.5s;
@@ -335,12 +374,37 @@ nav ul li{
     align-items: center;
 }
 
+.ImageZoomDivLeft {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .ImageZoomDivRight {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+  
+
+.mainOrderDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    flex-direction: column;
+}
+
 .imageZoom:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .imageZoom p {
-    font-size: 25px;
+    font-size: 18px;
 }
 .imageZoomtexty {
     font-size: 25px;
@@ -379,24 +443,31 @@ nav ul li{
         width: 95vw;
         text-align: center;
     }
-    .imagediv{
-        display: none;
-    }
     .contactdiv{
-        margin: 20px;
         width: 100%;
-    }
-    .makeColumn{
-        flex-direction: column;
+        padding: 15px;
     }
     .imageZoom {
-        width: 250px;
-        height: 250px;
-    }
-    .imageZoom p {
-        font-size: 20px;
+        width: 180px;
+        height: 180px;
     }
     .imageZoomtexty {
         font-size: 20px;
     }
+    .mainOrderDiv{
+        width: 95vw;
+    }
+    .makeColumn{
+        flex-direction: column;
+    }
+
+    .ImageZoomDivLeft {
+        justify-content: center;
+    }
+      
+    .ImageZoomDivRight {
+        justify-content: center;
+    }
+      
 }
+

@@ -43,8 +43,8 @@ const NavbarMain = () => {
     <>
       <nav ref={navRef} style={{ zIndex: '100' }}>
         <input type="checkbox" id="check" checked={isChecked} onChange={handleCheckboxChange} />
-        {/* eslint-disable-next-line  */}
-        <a className="nav-link" style={{margin: '0px 0px 0px 20px', zIndex: '2', cursor: 'pointer'}} onClick={() => scrollToSection('home')}>
+
+        <a className="nav-link" style={{margin: '0px 0px 0px 20px', zIndex: '2', cursor: 'pointer'}} href='/'>
           <h1 style={{color: 'white', fontSize: '30px', fontWeight: '300', marginTop: '30px'}}>Mangokhas</h1>
         </a>
 
@@ -84,9 +84,8 @@ const NavbarMain = () => {
             </a>
           </li>
           <li>
-          {/* eslint-disable-next-line  */}
-            <a className="nav-link" style={{ color: 'white', cursor: 'pointer' }} onClick={() => { closeNavvy(); scrollToSection('contact'); }}>
-              Contact
+            <a className="nav-link" style={{ color: 'white', cursor: 'pointer' }} href='/Checkout' onClick={() => { closeNavvy(); }}>
+              Order
             </a>
           </li>
         </ul>
