@@ -114,10 +114,10 @@ const Checkout = () => {
                   <div style={{display: 'flex', width: '100%', padding: '10px 10px 0px 10px', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', gap: '10px'}}>
                   {/* Premium Sindhri Mango Box 5kgs */}
                       <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                          <div style={{display: 'flex', width: '50%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Premium Sindhri Mango Box 5kgs - (PKR 1800)</p>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Premium Sindhri Mango Box 5kgs <br></br> (PKR 1800)</p>
                           </div>
-                          <div style={{display: 'flex', width: '50%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
                               <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
                                   <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('mangoBox5kg')}>-</div>
                                   <span style={{color: 'white', width: ''}}>{cart.mangoBox5kg}</span>
@@ -128,10 +128,10 @@ const Checkout = () => {
       
                   {/* Khas Premium Achar 500g */}
                       <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                          <div style={{display: 'flex', width: '50%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khas Premium Achar 500g - (PKR 450)</p>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khas Premium Achar 500g <br></br> (PKR 450)</p>
                           </div>
-                          <div style={{display: 'flex', width: '50%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
                               <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
                                   <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('achar500g')}>-</div>
                                   <span style={{color: 'white', width: ''}}>{cart.achar500g}</span>
@@ -142,10 +142,10 @@ const Checkout = () => {
       
                   {/* Khas Premium Achar 1000g */}
                       <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                          <div style={{display: 'flex', width: '50%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khas Premium Achar 1000g - (PKR 700)</p>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khas Premium Achar 1000g <br></br> (PKR 700)</p>
                           </div>
-                          <div style={{display: 'flex', width: '50%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
                               <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
                                   <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('achar1000g')}>-</div>
                                   <span style={{color: 'white', width: ''}}>{cart.achar1000g}</span>
