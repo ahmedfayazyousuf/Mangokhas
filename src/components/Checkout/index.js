@@ -93,10 +93,15 @@ const Checkout = () => {
           successMessage.style.color = 'black';
         }, 5000);
         setCart({
-            mangoBox5kg: 0,
-            KhattaMeethaAchar500g: 0,
-            KhattaMeethaAchar1000g: 0,
-            mangoBox2_5kg: 0
+          mangoBox5kg: 0,
+          KhattaMeethaAchar500g: 0,
+          KhattaMeethaAchar1000g: 0,
+          AamKaAcharOil500g: 0,
+          AamKaAcharOil1000g: 0,
+          MixVegetableAchar500g: 0,
+          MixVegetableAchar1000g: 0,
+          HariChutney500g: 0,
+          HariChutney1000g: 0
           });
       }, (error) => {
         console.error('Email sending failed:', error.text);
