@@ -88,7 +88,7 @@ const Checkout = () => {
   return (
     <>
     <Navbar />
-        <div style={{width: '100vw', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black', flexDirection: 'column', paddingTop: '100px', paddingBottom: '100px', backgroundImage: `url('${Cover}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+        <div style={{width: '100vw', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black', flexDirection: 'column', paddingTop: '100px', paddingBottom: '100px', backgroundImage: `url('${Cover}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundAttachment: 'fixed'}}>
           <div className='mainOrderDiv'>
               <div className="imagediv" style={{position: 'relative'}}>
                 <h1 style={{ color: '#d49400', width: '100%', textAlign: 'center'}}>Let's Talk Mangoes and Pickles!</h1>
