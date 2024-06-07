@@ -73,7 +73,6 @@ const Checkout = () => {
       total: calculateTotal(),
       name: e.target.Name.value,
       email: e.target.Email.value,
-      subject: e.target.Subject.value,
       phone: e.target.Phone.value,
       city: e.target.City.value,
       province: e.target.Province.value,
@@ -271,7 +270,6 @@ const Checkout = () => {
                   {/* Input Fields */}
                   <input name="Name" id="name" placeholder="Full Name" required type="text"/>
                   <input name="Email" id="email" placeholder="Email Address" required type="email"/>
-                  <input name="Subject" id="Subject" placeholder="Subject" required />
                   <input name="Phone" id="Phone" placeholder="Phone number" required className="no-spinner" type="number" />
                   <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', gap: '10px', margin: '0'}}>
                       <input name="City" id="City" placeholder="City" required type="text" />
