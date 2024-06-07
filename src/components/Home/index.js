@@ -2,7 +2,6 @@ import Navbar from '../HeaderFooter/Navbar/index.js';
 import React from 'react';
 import About from './About/index.js';
 import HeroSection from './HeroSection/index.js';
-// import Contact from './Contact/index.js';
 import AboutTwo from './AboutTwo/index.js';
 import AboutThree from './AboutThree/index.js';
 import Offerings from './Offerings/index.js';
@@ -36,10 +35,6 @@ const Home = () => {
                 <section id='gallery' style={{background: 'black', height: '100vh', width: '100vw', display:'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <AboutThree />
                 </section>
-
-                {/* <section id='contact' style={{background: 'black', height: '100vh', width: '100vw', display:'flex', justifyContent: 'center', alignItems: 'center'}}>
-                    <Contact />
-                </section> */}
             </div> 
         </>
     );
