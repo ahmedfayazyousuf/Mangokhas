@@ -136,9 +136,9 @@ const Checkout = () => {
       
               <div className="contactdiv">
               <form onSubmit={sendEmail} style={{display: 'flex', gap: '10px', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center'}}>
-                  <div style={{display: 'flex', width: '100%', padding: '10px 10px 0px 10px', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', gap: '10px'}}>
+                  <div style={{display: 'flex', width: '100%', padding: '10px 10px 0px 10px', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', gap: '15px'}}>
                   {/* Premium Sindhri Mango Box 5kgs */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Premium Sindhri Mango Box 5kgs <br></br> (PKR 1800)</p>
                           </div>
@@ -152,7 +152,7 @@ const Checkout = () => {
                       </div>
       
                   {/* Khatta Meetha Achar 500g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Khatta Meetha Achar 500g <br></br> (PKR 650)</p>
                           </div>
@@ -166,7 +166,7 @@ const Checkout = () => {
                       </div>
       
                   {/* Khatta Meetha Achar 1000g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Khatta Meetha Achar 1000g <br></br> (PKR 950)</p>
                           </div>
@@ -180,7 +180,7 @@ const Checkout = () => {
                       </div>
 
                   {/* Aam ka Achar (with oil) 500g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Aam ka Achar (with oil) 500g <br></br> (PKR 650)</p>
                           </div>
@@ -194,7 +194,7 @@ const Checkout = () => {
                       </div>
       
                   {/* Aam ka Achar (with oil) 1000g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Aam ka Achar (with oil) 1000g <br></br> (PKR 950)</p>
                           </div>
@@ -208,7 +208,7 @@ const Checkout = () => {
                       </div>
 
                   {/* Mix Vegetable Achar 500g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Mix Vegetable Achar 500g<br></br> (PKR 650)</p>
                           </div>
@@ -222,7 +222,7 @@ const Checkout = () => {
                       </div>
       
                   {/* Mix Vegetable Achar 1000g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Mix Vegetable Achar 1000g <br></br> (PKR 950)</p>
                           </div>
@@ -236,7 +236,7 @@ const Checkout = () => {
                       </div>
 
                   {/* Hari Chutney 500g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Hari Chutney 500g<br></br> (PKR 650)</p>
                           </div>
@@ -250,7 +250,7 @@ const Checkout = () => {
                       </div>
       
                   {/* Hari Chutney 1000g */}
-                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', borderBottom: '1px solid grey', paddingBottom: '12px'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
                               <p style={{color: '#fff', margin: '0', padding: '0'}}>Hari Chutney 1000g <br></br> (PKR 950)</p>
                           </div>
