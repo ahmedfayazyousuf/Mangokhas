@@ -10,9 +10,14 @@ import Cover from '../1_MediaAssets/SectionImages/MangoTexture.png'
 const Checkout = () => {
   const [cart, setCart] = useState({
     mangoBox5kg: 0,
-    achar500g: 0,
-    achar1000g: 0,
-    mangoBox2_5kg: 0
+    KhattaMeethaAchar500g: 0,
+    KhattaMeethaAchar1000g: 0,
+    AamKaAcharOil500g: 0,
+    AamKaAcharOil1000g: 0,
+    MixVegetableAchar500g: 0,
+    MixVegetableAchar1000g: 0,
+    HariChutney500g: 0,
+    HariChutney1000g: 0,
   });
 
   // Define your EmailJS service, template ID, and user ID
@@ -22,9 +27,14 @@ const Checkout = () => {
 
   const prices = {
     mangoBox5kg: 1800,
-    achar500g: 450,
-    achar1000g: 700,
-    mangoBox2_5kg: 900 // Add price for mangoBox2_5kg if needed
+    KhattaMeethaAchar500g: 650,
+    KhattaMeethaAchar1000g: 950,
+    AamKaAcharOil500g: 650,
+    AamKaAcharOil1000g: 950,
+    MixVegetableAchar500g: 650,
+    MixVegetableAchar1000g: 950,
+    HariChutney500g: 650,
+    HariChutney1000g: 950,
   };
 
   const handleIncrement = (product) => {
@@ -47,8 +57,19 @@ const Checkout = () => {
   
     const templateParams = {
       mangoBox5kg: cart.mangoBox5kg,
-      achar500g: cart.achar500g,
-      achar1000g: cart.achar1000g,
+
+      KhattaMeethaAchar500g: cart.KhattaMeethaAchar500g,
+      KhattaMeethaAchar1000g: cart.KhattaMeethaAchar1000g,
+
+      AamKaAcharOil500g: cart.AamKaAcharOil500g,
+      AamKaAcharOil1000g: cart.AamKaAcharOil1000g,
+
+      MixVegetableAchar500g: cart.MixVegetableAchar500g,
+      MixVegetableAchar1000g: cart.MixVegetableAchar1000g,
+
+      HariChutney500g: cart.HariChutney500g,
+      HariChutney1000g: cart.HariChutney1000g,
+      
       total: calculateTotal(),
       name: e.target.Name.value,
       email: e.target.Email.value,
@@ -73,8 +94,8 @@ const Checkout = () => {
         }, 5000);
         setCart({
             mangoBox5kg: 0,
-            achar500g: 0,
-            achar1000g: 0,
+            KhattaMeethaAchar500g: 0,
+            KhattaMeethaAchar1000g: 0,
             mangoBox2_5kg: 0
           });
       }, (error) => {
@@ -126,30 +147,114 @@ const Checkout = () => {
                           </div>
                       </div>
       
-                  {/* Khas Premium Achar 500g */}
+                  {/* Khatta Meetha Achar 500g */}
                       <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khas Premium Achar 500g <br></br> (PKR 450)</p>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khatta Meetha Achar 500g <br></br> (PKR 650)</p>
                           </div>
                           <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
                               <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
-                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('achar500g')}>-</div>
-                                  <span style={{color: 'white', width: ''}}>{cart.achar500g}</span>
-                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('achar500g')}>+</div>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('KhattaMeethaAchar500g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.KhattaMeethaAchar500g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('KhattaMeethaAchar500g')}>+</div>
                               </div> 
                           </div>
                       </div>
       
-                  {/* Khas Premium Achar 1000g */}
+                  {/* Khatta Meetha Achar 1000g */}
                       <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
                           <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
-                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khas Premium Achar 1000g <br></br> (PKR 700)</p>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Khatta Meetha Achar 1000g <br></br> (PKR 950)</p>
                           </div>
                           <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
                               <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
-                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('achar1000g')}>-</div>
-                                  <span style={{color: 'white', width: ''}}>{cart.achar1000g}</span>
-                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('achar1000g')}>+</div>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('KhattaMeethaAchar1000g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.KhattaMeethaAchar1000g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('KhattaMeethaAchar1000g')}>+</div>
+                              </div>
+                          </div>
+                      </div>
+
+                  {/* Aam ka Achar (with oil) 500g */}
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Aam ka Achar (with oil) 500g <br></br> (PKR 650)</p>
+                          </div>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('AamKaAcharOil500g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.AamKaAcharOil500g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('AamKaAcharOil500g')}>+</div>
+                              </div> 
+                          </div>
+                      </div>
+      
+                  {/* Aam ka Achar (with oil) 1000g */}
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Aam ka Achar (with oil) 1000g <br></br> (PKR 950)</p>
+                          </div>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('AamKaAcharOil1000g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.AamKaAcharOil1000g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('AamKaAcharOil1000g')}>+</div>
+                              </div>
+                          </div>
+                      </div>
+
+                  {/* Mix Vegetable Achar 500g */}
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Mix Vegetable Achar 500g<br></br> (PKR 650)</p>
+                          </div>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('MixVegetableAchar500g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.MixVegetableAchar500g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('MixVegetableAchar500g')}>+</div>
+                              </div> 
+                          </div>
+                      </div>
+      
+                  {/* Mix Vegetable Achar 1000g */}
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Mix Vegetable Achar 1000g <br></br> (PKR 950)</p>
+                          </div>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('MixVegetableAchar1000g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.MixVegetableAchar1000g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('MixVegetableAchar1000g')}>+</div>
+                              </div>
+                          </div>
+                      </div>
+
+                  {/* Hari Chutney 500g */}
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Hari Chutney 500g<br></br> (PKR 650)</p>
+                          </div>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('HariChutney500g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.HariChutney500g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('HariChutney500g')}>+</div>
+                              </div> 
+                          </div>
+                      </div>
+      
+                  {/* Hari Chutney 1000g */}
+                      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                          <div style={{display: 'flex', width: '65%', justifyContent: 'flex-start', alignItems: 'center'}}>
+                              <p style={{color: '#fff', margin: '0', padding: '0'}}>Hari Chutney 1000g <br></br> (PKR 950)</p>
+                          </div>
+                          <div style={{display: 'flex', width: '35%', justifyContent: 'flex-end', alignItems: 'center'}}>
+                              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', background: 'black', padding: '5px'}}>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleDecrement('HariChutney1000g')}>-</div>
+                                  <span style={{color: 'white', width: ''}}>{cart.HariChutney1000g}</span>
+                                  <div style={{cursor: 'pointer', fontSize: '15px', fontWeight: '900', background: 'black', border: '1px solid white', color: 'white', height: '25px', width: '25px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0'}} onClick={() => handleIncrement('HariChutney1000g')}>+</div>
                               </div>
                           </div>
                       </div>

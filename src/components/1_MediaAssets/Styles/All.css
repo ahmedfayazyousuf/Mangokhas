@@ -390,8 +390,8 @@ nav ul li{
 }
 
 .imageZoom {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     transition: transform 0.5s;
@@ -404,22 +404,16 @@ nav ul li{
     align-items: center;
 }
 
-.ImageZoomDivLeft {
+.ImageZoomDivier {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     gap: 15px;
   }
   
-  .ImageZoomDivRight {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    gap: 15px;
-  }
-  
+
 
 .mainOrderDiv{
     display: flex;
@@ -478,8 +472,8 @@ nav ul li{
         padding: 15px;
     }
     .imageZoom {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
     }
     .imageZoomtexty {
         font-size: 20px;
@@ -491,13 +485,10 @@ nav ul li{
         flex-direction: column;
     }
 
-    .ImageZoomDivLeft {
+    .ImageZoomDivier {
         justify-content: center;
     }
-      
-    .ImageZoomDivRight {
-        justify-content: center;
-    }
+    
 
     .leftAboutTwo {
         /* clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%); */
