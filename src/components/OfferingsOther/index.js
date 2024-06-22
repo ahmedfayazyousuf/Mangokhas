@@ -17,7 +17,7 @@ const OfferingsOther = () => {
             <div className='paddingDedo' style={{ width: '100vw', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black', flexDirection: 'column', backgroundImage: `url('${Cover}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
                 <TextAnim Body={
                     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '0px 0px 10px 0px', width: '100%'}}>
-                        <h1 className='HeaderText' style={{color: 'white', width :'100%', textAlign: 'center'}}>Our Offerings - <span className='fontSpecial' style={{ color: '#d49400'}}>Achaar & Other Delights</span></h1>
+                        <h1 className='HeaderText' style={{width :'100%', textAlign: 'center', color: '#d49400'}}>Achaar & Other Delights</h1>
                     </div>
                 }/>
                 <div className='makeColumn' style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', margin: '20px 0px', gap: '15px'}}>
