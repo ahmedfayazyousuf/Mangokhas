@@ -22,7 +22,7 @@ const Offerings = () => {
                     </NavLink>
                     <NavLink to='/OfferingsOther'>
                     <div className='imageOfferingsItem2' style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${Other}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-                        <p style={{fontSize: '12px', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Achaar, Chutneys & more</p>
+                        <p style={{fontSize: '12px', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Achaar & Other Delights</p>
                     </div>
                     </NavLink>
                 </div>
