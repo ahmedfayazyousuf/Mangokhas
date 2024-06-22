@@ -61,7 +61,7 @@ const Checkout = () => {
     
         console.log('templateParams:', templateParams); // Log to debug
     
-        emailjs.send('service_jpk4a0n', 'template_pas1i84', templateParams, 'oBtsBhFsJoL-9rIkB')
+        emailjs.send('service_tc2d7fm', 'template_pgkzv6f', templateParams, 'IRNapufRcoSNV_C-y')
         .then((result) => {
             console.log('Email sent successfully:', result.text);
             e.target.reset();
@@ -78,11 +78,6 @@ const Checkout = () => {
             console.error('Email sending failed:', error.text);
         });
     };
-  
-
-  
-  
-
 
   const items = [
     { id: 'SindhriMangoBox', name: 'Premium Sindhri Mango Box', prices: { '5kg': 1600 } },
@@ -140,7 +135,7 @@ const Checkout = () => {
               <a href='https://wa.me/923063311880' target='_blank' rel="noreferrer noopener" style={{ marginBottom: '-4px' }}>
                 <FaWhatsapp className="HomeIcon" style={{ fontSize: '20px', padding: '0', margin: '0' }} />
               </a>
-              <a href='https://w.app/s3Pdih' target='_blank' rel="noreferrer noopener" style={{ marginBottom: '-4px' }}>
+              <a href='mailto:hello@mangokhas.com' target='_blank' rel="noreferrer noopener" style={{ marginBottom: '-4px' }}>
                 <HiOutlineMail className="HomeIcon" style={{ fontSize: '23px', padding: '0', margin: '0' }} />
               </a>
             </div>
