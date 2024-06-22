@@ -27,7 +27,7 @@ const OfferingsMangoes = () => {
                             <p style={{fontSize: '12px', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Premium Chaunsa Mangoes</p>
                         </div>
                         <div className='imageOfferingsItem' style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end', position: 'relative', backgroundColor: 'black', backgroundImage: `url('${MangoSindhri}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', filter: 'grayscale(100%)'}}>
-                            <p style={{fontSize: '12px', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Premium x Mangoes (Coming Soon)</p>
+                            <p style={{fontSize: '12px', color: 'white', margin: '0', padding: '10px', width: '100%', textAlign: 'center', background: 'rgba(0,0,0,0.7)'}}>Premium Anwar Atol Mangoes (Coming Soon)</p>
                         </div>
                     </div>
                 </div>
