@@ -141,7 +141,7 @@ const Checkout = () => {
               <a href='https://wa.me/923063311880' target='_blank' rel="noreferrer noopener" style={{ marginBottom: '-4px' }}>
                 <FaWhatsapp className="HomeIcon" style={{ fontSize: '20px', padding: '0', margin: '0' }} />
               </a>
-              <a href='mailto:hello@mangokhas.com' target='_blank' rel="noreferrer noopener" style={{ marginBottom: '-4px' }}>
+              <a href='mailto:mangokhas@gmail.com' target='_blank' rel="noreferrer noopener" style={{ marginBottom: '-4px' }}>
                 <HiOutlineMail className="HomeIcon" style={{ fontSize: '23px', padding: '0', margin: '0' }} />
               </a>
             </div>
