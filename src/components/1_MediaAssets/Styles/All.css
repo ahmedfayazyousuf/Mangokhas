@@ -412,6 +412,29 @@ nav ul li{
     align-items: center;
 }
 
+.imageOfferingsItem {   
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+    cursor: pointer;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageOfferingsItem:hover {
+    transform: scale(1.02);
+}
+
+.imageOfferingsItem p {
+    font-size: 18px;
+}
+
 .ImageZoomDivier {
     display: flex;
     justify-content: center;
