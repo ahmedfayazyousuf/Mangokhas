@@ -470,6 +470,9 @@ nav ul li{
 }
 
 @media screen and (max-width: 1000px) { 
+    .paddingDedo{
+        padding: 100px 0px;
+    }
     .makemeColumn{
         flex-direction: column;
     }
