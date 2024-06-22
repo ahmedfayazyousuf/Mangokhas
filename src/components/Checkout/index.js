@@ -6,67 +6,79 @@ import emailjs from 'emailjs-com';
 import Cover from '../1_MediaAssets/SectionImages/MangoTexture.png';
 
 const Checkout = () => {
-  const [cart, setCart] = useState({});
-
-  const sendEmail = (e) => {
-  e.preventDefault();
-  document.getElementById("SubmitButton").innerHTML = "Loading...";
-
-  const DeliveryCity = document.getElementById("City").value.toLowerCase(); // Convert to lowercase
-  const containsOnlyMangoes = Object.keys(cart).some(key =>
-    key.startsWith('SindhriMangoBox') || key.startsWith('ChaunsaMangoBox')
-  );
-
-  if (DeliveryCity !== "karachi" && !containsOnlyMangoes) { // Compare with lowercase "karachi"
-    const successMessage = document.getElementById('success-message');
-    successMessage.style.color = 'red';
-    successMessage.innerHTML = "Only Mangoes delivered outside Karachi! <br> Kindly modify your cart or change your location.";
-    document.getElementById("SubmitButton").innerHTML = "Submit";
-    setTimeout(() => {
-      successMessage.style.color = 'black';
-    }, 5000);
-    return;
-  }
-
-  // Constructing order details as a single string
-  const orderDetails = Object.keys(cart).reduce((details, key) => {
-    if (cart[key] > 0) {
-      details += `${key}: ${cart[key]}, `;
-    }
-    return details;
-  }, '');
-
-  // Adding basic information
-  const templateParams = {
-    orderDetails: orderDetails.slice(0, -2), // Removing the last comma and space
-    total: calculateTotal(),
-    name: e.target.Name.value,
-    email: e.target.Email.value,
-    phone: e.target.Phone.value,
-    city: e.target.City.value,
-    province: e.target.Province.value,
-    address: e.target.address.value
-  };
-
-  console.log('templateParams:', templateParams); // Log to debug
-
-  emailjs.send('service_jpk4a0n', 'template_pas1i84', templateParams, 'oBtsBhFsJoL-9rIkB')
-    .then((result) => {
-      console.log('Email sent successfully:', result.text);
-      e.target.reset();
-      const successMessage = document.getElementById('success-message');
-      successMessage.style.color = 'green';
-      successMessage.innerHTML = "Order request sent! We will contact you soon!";
-      document.getElementById("SubmitButton").innerHTML = "Submit";
-      setTimeout(() => {
-        successMessage.style.color = 'black';
-      }, 5000);
-      setCart({});
-    })
-    .catch((error) => {
-      console.error('Email sending failed:', error.text);
-    });
-};
+    const [cart, setCart] = useState({});
+    const sendEmail = (e) => {
+        e.preventDefault();
+        document.getElementById("SubmitButton").innerHTML = "Loading...";
+    
+        const DeliveryCity = document.getElementById("City").value.toLowerCase(); // Convert to lowercase
+        const containsOnlyMangoes = Object.keys(cart).some(key =>
+        key.startsWith('SindhriMangoBox') || key.startsWith('ChaunsaMangoBox')
+        );
+    
+        // Check if cart is empty
+        if (Object.keys(cart).length === 0) {
+        const successMessage = document.getElementById('success-message');
+        successMessage.style.color = 'red';
+        successMessage.innerHTML = "Please add items to cart!";
+        document.getElementById("SubmitButton").innerHTML = "Submit";
+        setTimeout(() => {
+            successMessage.style.color = 'black';
+        }, 5000);
+        return;
+        }
+    
+        if (DeliveryCity !== "karachi" && !containsOnlyMangoes) { // Compare with lowercase "karachi"
+        const successMessage = document.getElementById('success-message');
+        successMessage.style.color = 'red';
+        successMessage.innerHTML = "Only Mangoes delivered outside Karachi! <br> Kindly modify your cart or change your location.";
+        document.getElementById("SubmitButton").innerHTML = "Submit";
+        setTimeout(() => {
+            successMessage.style.color = 'black';
+        }, 5000);
+        return;
+        }
+    
+        // Constructing order details as a single string
+        const orderDetails = Object.keys(cart).reduce((details, key) => {
+        if (cart[key] > 0) {
+            details += `${key}: ${cart[key]}, `;
+        }
+        return details;
+        }, '');
+    
+        // Adding basic information
+        const templateParams = {
+        orderDetails: orderDetails.slice(0, -2), // Removing the last comma and space
+        total: calculateTotal(),
+        name: e.target.Name.value,
+        email: e.target.Email.value,
+        phone: e.target.Phone.value,
+        city: e.target.City.value,
+        province: e.target.Province.value,
+        address: e.target.address.value
+        };
+    
+        console.log('templateParams:', templateParams); // Log to debug
+    
+        emailjs.send('service_jpk4a0n', 'template_pas1i84', templateParams, 'oBtsBhFsJoL-9rIkB')
+        .then((result) => {
+            console.log('Email sent successfully:', result.text);
+            e.target.reset();
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.color = 'green';
+            successMessage.innerHTML = "Order request sent! We will contact you soon!";
+            document.getElementById("SubmitButton").innerHTML = "Submit";
+            setTimeout(() => {
+            successMessage.style.color = 'black';
+            }, 5000);
+            setCart({});
+        })
+        .catch((error) => {
+            console.error('Email sending failed:', error.text);
+        });
+    };
+  
 
   
   
@@ -159,7 +171,7 @@ const Checkout = () => {
               </div>
 
               <div className="formdata" style={{ display: 'flex', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '10px'}}>
-                <h2 className="heading" style={{ color: '#d49400', margin: '0', padding: '0', textAlign: 'center' }}>Enter your details below to confirm your order</h2>
+                <h2 className="heading" style={{ color: '#d49400', margin: '0', padding: '0', textAlign: 'center', fontWeight: '300' }}>Enter your details below to confirm your order</h2>
                 <input className="input" name="Name" type="text" placeholder="Full Name" required />
                 <input className="input" name="Email" type="email" placeholder="Email" required />
                 <input className="input" name="Phone" type="number" placeholder="Phone Number" required />
