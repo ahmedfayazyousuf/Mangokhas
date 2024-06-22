@@ -28,7 +28,7 @@ const Offerings = () => {
                 </div>
             </div>
 
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '40px 0px 0px 0px', width: '100%'}}>
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0', margin: '10px 0px 0px 0px', width: '100%'}}>
                 <NavLink to="/Checkout">
                     <button className='buttonMain2'>Order Now!</button>
                 </NavLink>
