@@ -1,5 +1,5 @@
 import Cover from '../1_MediaAssets/SectionImages/MangoTexture.png';
-import Navbar from '../HeaderFooter/Navbar/index.js';
+import Navbar from '../HeaderFooter/Navbar/NavbarThree.js';
 import TextAnim from '../1_MediaAssets/Styles/FadeAnimation.jsx';
 import React from 'react';
 
