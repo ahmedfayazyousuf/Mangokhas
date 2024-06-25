@@ -63,7 +63,7 @@ const Checkout = () => {
         console.log('templateParams:', templateParams); // Log to debug
     
         // emailjs.send('service_jpk4a0n', 'template_pas1i84', templateParams, 'oBtsBhFsJoL-9rIkB')
-        emailjs.send('service_tc2d7fm', 'template_pgkzv6f', templateParams, 'IRNapufRcoSNV_C-y')
+        emailjs.send('service_tc2d7fm', 'template_pgkzv6f', templateParams, 'oSlgLc8eZpRNdorcO')
         .then((result) => {
             console.log('Email sent successfully:', result.text);
             e.target.reset();
