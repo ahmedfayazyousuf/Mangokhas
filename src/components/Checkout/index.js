@@ -178,7 +178,7 @@ const Checkout = () => {
                 <input className="input" name="Phone" type="number" placeholder="Phone Number" required />
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', gap: '10px', margin: '0'}}>
                     <input name="City" id="City" placeholder="City" required type="text" />
-                    <select name="Province" id="Province" required style={{padding: '10px', height: '40px'}} type="text" >
+                    <select name="Province" id="Province" required style={{padding: '10px', height: '40px', borderRadius: '0px'}} type="text" >
                         <option selected disabled value="">Province</option>
                         <option value="Sindh">Sindh</option>
                         <option value="Punjab">Punjab</option>
