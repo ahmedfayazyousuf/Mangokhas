@@ -1,0 +1,55 @@
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../../1_MediaAssets/SectionImages/HeroCover.png');   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .basket {
+    position: absolute;
+    bottom: 20px;
+    width: 200px;
+    height: 100px;
+    background: url('../../1_MediaAssets/Games/Basket.png') no-repeat center center;
+    background-size: contain;
+  }
+  
+  .mango {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('../../1_MediaAssets/Games/Mango.png') no-repeat center center;
+    background-size: contain;
+  }
+  
+  .obstacle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('../../1_MediaAssets/Games/Bomb.png') no-repeat center center;
+    background-size: contain;
+  }
+  
+  .score {
+    padding: 5px 20px;
+    position: absolute;
+    background-color: white;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #000;
+  }
+  .timer {
+    padding: 5px 20px;
+    position: absolute;
+    background-color: white;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #000;
+  }
+  
