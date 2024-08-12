@@ -1,40 +1,44 @@
 .game-container {
     position: relative;
-    width: 100vw;
+    width: 100%;
+    max-width: 600px; /* Max width of the gameplay area */
     height: 100vh;
     overflow: hidden;
-    background-image: url('../../1_MediaAssets/SectionImages/HeroCover.png');   
+    background-image: url('../../1_MediaAssets/SectionImages/HeroCover.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
-  .basket {
+    margin: 0 auto; /* Center the game container */
+}
+
+.basket {
     position: absolute;
     bottom: 20px;
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    background-color: red;
+    background: red;
+    height: 50px;
     background: url('../../1_MediaAssets/Games/Basket.png') no-repeat center center;
     background-size: contain;
-  }
-  
-  .mango {
+}
+
+.mango {
     position: absolute;
     width: 50px;
     height: 50px;
     background: url('../../1_MediaAssets/Games/Mango.png') no-repeat center center;
     background-size: contain;
-  }
-  
-  .obstacle {
+}
+
+.obstacle {
     position: absolute;
     width: 50px;
     height: 50px;
     background: url('../../1_MediaAssets/Games/Bomb.png') no-repeat center center;
     background-size: contain;
-  }
-  
-  .score {
+}
+
+.score {
     padding: 5px 20px;
     position: absolute;
     background-color: white;
@@ -42,8 +46,9 @@
     left: 10px;
     font-size: 24px;
     color: #000;
-  }
-  .timer {
+}
+
+.timer {
     padding: 5px 20px;
     position: absolute;
     background-color: white;
@@ -51,5 +56,16 @@
     right: 10px;
     font-size: 24px;
     color: #000;
-  }
-  
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Basket from './Basket';
 import Mango from './Mango';
 import Obstacle from './Obstacle';
@@ -12,13 +12,17 @@ const Game = () => {
   const [timeRemaining, setTimeRemaining] = useState(30); // 30 seconds
   const [gameOver, setGameOver] = useState(false);
 
+  const previousTime = useRef(0); // To keep track of previous time for deltaTime calculation
+  const fallingSpeed = 200; // Constant falling speed (pixels per second)
+  const maxWidth = 600; // Maximum width for the gameplay area
+  const maxItems = 10; // Maximum number of items on screen
+
   useEffect(() => {
-    // Handle basket movement
     const handleKeyDown = (e) => {
       if (e.key === 'ArrowLeft') {
         setBasketPosition((prev) => Math.max(prev - 20, 0));
       } else if (e.key === 'ArrowRight') {
-        setBasketPosition((prev) => Math.min(prev + 20, window.innerWidth - 100));
+        setBasketPosition((prev) => Math.min(prev + 20, maxWidth - 100));
       }
     };
 
@@ -28,25 +32,29 @@ const Game = () => {
   }, []);
 
   useEffect(() => {
-    // Game loop
-    const gameLoop = setInterval(() => {
-      // Update positions
+    const gameLoop = (time) => {
+      // Calculate deltaTime
+      const deltaTime = (time - previousTime.current) / 1000; // Convert to seconds
+      previousTime.current = time;
+
+      // Update positions based on falling speed
       setMangoes((prev) =>
         prev
-          .map((mango) => ({ ...mango, top: mango.top + 10 })) // Increase falling speed
+          .map((mango) => ({ ...mango, top: mango.top + fallingSpeed * deltaTime })) // Use fallingSpeed
           .filter((mango) => mango.top < window.innerHeight)
       );
+
       setObstacles((prev) =>
         prev
-          .map((obstacle) => ({ ...obstacle, top: obstacle.top + 10 })) // Increase falling speed
+          .map((obstacle) => ({ ...obstacle, top: obstacle.top + fallingSpeed * deltaTime })) // Use fallingSpeed
           .filter((obstacle) => obstacle.top < window.innerHeight)
       );
 
-      // Generate new mangoes and obstacles
-      if (Math.random() < 0.02) {
+      // Generate new mangoes and obstacles less frequently
+      if (Math.random() < 0.0005 && mangoes.length + obstacles.length < maxItems) { // Reduced generation rate
         setMangoes((prev) => [...prev, createItem('mango')]);
       }
-      if (Math.random() < 0.01) {
+      if (Math.random() < 0.0005 && mangoes.length + obstacles.length < maxItems) { // Reduced generation rate
         setObstacles((prev) => [...prev, createItem('obstacle')]);
       }
 
@@ -84,13 +92,19 @@ const Game = () => {
           return acc;
         }, []);
       });
-    }, 100);
+
+      if (!gameOver) {
+        requestAnimationFrame(gameLoop);
+      }
+    };
+
+    requestAnimationFrame(gameLoop);
 
     // Timer for the game
-    const timer = setInterval(() => {
+    const timerInterval = setInterval(() => {
       setTimeRemaining((prevTime) => {
         if (prevTime <= 1) {
-          clearInterval(timer);
+          clearInterval(timerInterval);
           setGameOver(true);
           return 0;
         }
@@ -99,14 +113,13 @@ const Game = () => {
     }, 1000);
 
     return () => {
-      clearInterval(gameLoop);
-      clearInterval(timer);
+      clearInterval(timerInterval);
     };
-  }, [basketPosition]);
+  }, [basketPosition, gameOver]);
 
   const createItem = (type) => ({
     type,
-    left: Math.random() * (window.innerWidth - 50),
+    left: Math.random() * (maxWidth - 50), // Constrain item generation within maxWidth
     top: -50,
   });
 
