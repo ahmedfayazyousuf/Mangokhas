@@ -1,6 +1,6 @@
 import React from 'react';
 import About1 from '../../1_MediaAssets/SectionImages/About1.jpg';
-import About2 from '../../1_MediaAssets/SectionImages/About2.jpg';
+import About2 from '../../1_MediaAssets/SectionImages/AcharTypes/HariChutneyNew.jpg';
 import TextAnim from '../../1_MediaAssets/Styles/FadeAnimation.jsx';
 import { NavLink } from 'react-router-dom';
 
