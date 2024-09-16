@@ -4,7 +4,6 @@ import Navbar from '../HeaderFooter/Navbar/NavbarTwo.js';
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import Cover from '../1_MediaAssets/SectionImages/MangoTexture.png';
-
 import MangoBoxSindhri from '../1_MediaAssets/SectionImages/AcharTypes/MangoSindhri.jpg';
 import MangoBoxChaunsa from '../1_MediaAssets/SectionImages/AcharTypes/MangoChaunsa.jpeg';
 import AcharVeg from '../1_MediaAssets/SectionImages/AcharTypes/MixVegetableAcharNew.jpg';
@@ -155,13 +154,13 @@ const Checkout = () => {
                       <form onSubmit={sendEmail} className="makemeColumn" style={{ display: 'flex', gap: '25px', width: '100%', justifyContent: 'center', alignItems: 'flex-start' }}>
                           <div style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column' }}>
                             {items.map(item => (
-                              <div key={item.id} style={{ border: '1px solid #777', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px', position: 'relative', marginBottom: '15px', filter: outOfStockItems.includes(item.id) ? 'grayscale(100%)' : 'none' }}>
+                              <div key={item.id} style={{ border: '1px solid #777', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '400px', position: 'relative', marginBottom: '15px', filter: outOfStockItems.includes(item.id) ? 'grayscale(100%)' : 'none' }}>
                                   <div style={{ position: 'absolute', bottom: '0', width: '100%', backgroundColor: 'rgba(0, 0, 0, 0.9)', color: 'white', textAlign: 'center', padding: '10px 0px', borderTop: '1px solid #777' }}>
                                       <p style={{ margin: '0', padding: '0', letterSpacing: '1px', fontSize: '13px', fontWeight: '900', color: '#d49400', marginBottom: '5px' }}>
                                           {item.name}
                                       </p>
                                       {Object.keys(item.prices).map(weight => (
-                                          <div key={weight} style={{ display: 'flex', gap: '10px', alignItems: 'center', justifyContent: 'center', fontSize: '13px' }}>
+                                          <div key={weight} style={{ display: 'flex', gap: '10px', alignItems: 'center', justifyContent: 'center', fontSize: '13px', marginBottom: '5px' }}>
                                               <span style={{ color: 'white' }}>{weight}</span>
                                               <span style={{ color: 'white' }}>PKR {item.prices[weight]}</span>
                                               {!outOfStockItems.includes(item.id) ? (
@@ -185,7 +184,7 @@ const Checkout = () => {
                               </div>
                             ))}
                             <p style={{ color: 'white', width: '100%', textAlign: 'right', fontSize: '13px' }}>Total =<span style={{ color: '#d49400' }}> PKR {calculateTotal()}/-</span></p>
-                            <p style={{ color: 'white', width: '100%', textAlign: 'center', fontSize: '13px' }}>Note: This total is not inclusive of delivery charges</p>
+                            <p style={{ color: 'white', width: '100%', textAlign: 'center', fontSize: '13px' }}>Note: This quote is not inclusive of delivery charges</p>
                           </div>
 
                           <div className="formdata" style={{ display: 'flex', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '10px' }}>
@@ -205,6 +204,7 @@ const Checkout = () => {
                               </div>
                               <textarea name="address" id="address" rows="3" placeholder="Shipping address" required></textarea>
                               <button type="submit" id='SubmitButton' className="buttonMain2" style={{ marginTop: '5px' }}>Submit</button>
+                              <p style={{ color: 'white', width: '100%', textAlign: 'right', fontSize: '13px' }}>Total =<span style={{ color: '#d49400' }}> PKR {calculateTotal()}/-</span></p>
                               <p id="success-message" style={{ fontSize: '13px', margin: '0', textAlign: 'center' }}>Order request sent! We will contact you soon!</p>
                           </div>
                       </form>

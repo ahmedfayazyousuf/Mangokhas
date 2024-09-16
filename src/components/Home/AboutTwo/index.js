@@ -1,6 +1,4 @@
-// import TextAnim from '../../1_MediaAssets/Styles/FadeAnimation.jsx';
 import React from 'react';
-// import Texture from '../../1_MediaAssets/SectionImages/Texture.png';
 import Mangoes from '../../1_MediaAssets/SectionImages/About1.jpg';
 import Pickles from '../../1_MediaAssets/SectionImages/AcharTypes/MixVegetableAcharNew.jpg';
 
