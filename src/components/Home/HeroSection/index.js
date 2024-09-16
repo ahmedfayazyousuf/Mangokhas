@@ -1,12 +1,12 @@
 import React from 'react';
-import Cover from '../../1_MediaAssets/SectionImages/HeroCover.png';
+import Cover from '../../1_MediaAssets/SectionImages/HeroCover2.jpg';
 import Rotator from '../../1_MediaAssets/SectionImages/Rotator.png';
 import LogoKhaasacharRound from '../../1_MediaAssets/BrandImages/LogoKhaasacharRound.png';
 import LogoMangokhasRound from '../../1_MediaAssets/BrandImages/LogoMangokhasRound.png';
 
 const HeroSection = () => {
     return (
-        <div style={{ flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%', backgroundColor: 'black', backgroundImage: `url('${Cover}')`, backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative' }} >
+        <div style={{ flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%', backgroundColor: 'black', backgroundImage: `url('${Cover}')`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative' }} >
             <img className="rotator" style={{ position: 'absolute', width: '400px', right: '-200px', top: '5%', opacity: '0.3'}} alt='Rotator' src={Rotator} />
             <img className="rotator" style={{ position: 'absolute', width: '200px', left: '-100px', top: '65%', opacity: '0.3'}} alt='Rotator' src={Rotator} />
 
