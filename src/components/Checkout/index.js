@@ -70,7 +70,7 @@ const Checkout = () => {
         {
             id: 'MixVegetableAchar',
             name: 'Mix Vegetable Achar',
-            prices: { '450g': 450, '850g': 800 },
+            prices: { '450g': 400, '850g': 800 },
             image: AcharVeg 
         },
         {
