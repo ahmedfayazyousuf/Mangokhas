@@ -1,7 +1,7 @@
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import Navbar from '../HeaderFooter/Navbar/NavbarTwo.js';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import Cover from '../1_MediaAssets/SectionImages/MangoTexture.png';
 import MangoBoxSindhri from '../1_MediaAssets/SectionImages/AcharTypes/MangoSindhri.jpg';
@@ -12,11 +12,61 @@ import HariChutney from '../1_MediaAssets/SectionImages/AcharTypes/HariChutneyNe
 const Checkout = () => {
     const [cart, setCart] = useState({});
     const outOfStockItems = ['SindhriMangoBox', 'ChaunsaMangoBox'];
-    
+
+    // Google Sheets API configuration
+    const CLIENT_ID = '758334716806-0phbtvgfjnjlcj3meccodghe2j5q4gpd.apps.googleusercontent.com';
+    const API_KEY = 'AIzaSyABAcjnRWQ70XK8bhZshN88RpWdZ6bgZNo';
+    const SHEET_ID = '1bT3WdTjMTDowafae3HqfMkiJtwIBnUth9L1y8BxSqAk';
+    const DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+    const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+
+    // Load Google API client and initialize it
+    const loadGoogleApi = () => {
+        window.gapi.load("client:auth2", () => {
+            window.gapi.client.init({
+                apiKey: API_KEY,
+                clientId: CLIENT_ID,
+                discoveryDocs: DISCOVERY_DOCS,
+                scope: SCOPES
+            }).then(() => {
+                console.log('Google API client initialized');
+            }).catch(error => {
+                console.error('Error loading Google API client:', error);
+            });
+        });
+    };
+
+    useEffect(() => {
+        loadGoogleApi();
+    }, []);
+
+    // Function to append order data to Google Sheets
+    const appendDataToSheet = (data) => {
+        const params = {
+            spreadsheetId: SHEET_ID,
+            range: "Sheet1!A1", // Change this according to your sheet
+            valueInputOption: "RAW",
+            insertDataOption: "INSERT_ROWS"
+        };
+
+        const valueRangeBody = {
+            majorDimension: "ROWS",
+            values: [data]
+        };
+
+        window.gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody)
+            .then(response => {
+                console.log('Data added to Google Sheets:', response);
+            })
+            .catch(error => {
+                console.error('Error adding data to Google Sheets:', error);
+            });
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
         document.getElementById("SubmitButton").innerHTML = "Loading...";
-    
+
         if (Object.keys(cart).length === 0) {
             const successMessage = document.getElementById('success-message');
             successMessage.style.color = 'red';
@@ -46,24 +96,39 @@ const Checkout = () => {
             address: e.target.address.value
         };
 
-        console.log('templateParams:', templateParams);
-
+        // Send Email using EmailJS
         emailjs.send('service_tc2d7fm', 'template_pgkzv6f', templateParams, 'oSlgLc8eZpRNdorcO')
-        .then((result) => {
-            console.log('Email sent successfully:', result.text);
-            e.target.reset();
-            const successMessage = document.getElementById('success-message');
-            successMessage.style.color = 'green';
-            successMessage.innerHTML = "Order request sent! We will contact you soon!";
-            document.getElementById("SubmitButton").innerHTML = "Submit";
-            setTimeout(() => {
-                successMessage.style.color = 'black';
-            }, 5000);
-            setCart({});
-        })
-        .catch((error) => {
-            console.error('Email sending failed:', error.text);
-        });
+            .then((result) => {
+                console.log('Email sent successfully:', result.text);
+                const successMessage = document.getElementById('success-message');
+                successMessage.style.color = 'green';
+                successMessage.innerHTML = "Order request sent! We will contact you soon!";
+                document.getElementById("SubmitButton").innerHTML = "Submit";
+
+                // Prepare data to send to Google Sheets
+                const sheetData = [
+                    templateParams.name,
+                    templateParams.email,
+                    templateParams.phone,
+                    templateParams.city,
+                    templateParams.province,
+                    templateParams.address,
+                    templateParams.orderDetails,
+                    templateParams.total
+                ];
+
+                // Append data to Google Sheets
+                appendDataToSheet(sheetData);
+
+                e.target.reset();
+                setCart({});
+                setTimeout(() => {
+                    successMessage.style.color = 'black';
+                }, 5000);
+            })
+            .catch((error) => {
+                console.error('Email sending failed:', error.text);
+            });
     };
 
     const items = [
@@ -71,25 +136,25 @@ const Checkout = () => {
             id: 'MixVegetableAchar',
             name: 'Mix Vegetable Achar',
             prices: { '450g': 400, '850g': 800 },
-            image: AcharVeg 
+            image: AcharVeg
         },
         {
             id: 'HariChutney',
             name: 'Hari Chutney',
             prices: { '450g': 400, '850g': 800 },
-            image: HariChutney 
+            image: HariChutney
         },
         {
             id: 'SindhriMangoBox',
             name: 'Premium Sindhri Mango Box (Out of stock)',
             prices: { '5kg': 1600 },
-            image: MangoBoxSindhri 
+            image: MangoBoxSindhri
         },
         {
             id: 'ChaunsaMangoBox',
             name: 'Premium Chaunsa Mango Box (Out of stock)',
             prices: { '5kg': 1600 },
-            image: MangoBoxChaunsa 
+            image: MangoBoxChaunsa
         }
     ];
 
