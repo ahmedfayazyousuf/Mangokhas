@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Checkout from './components/Checkout';
 import OfferingsMangoes from './components/OfferingsMangoes';
 import OfferingsOther from './components/OfferingsOther';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService/index.js';
 import CursorTracker from './components/1_MediaAssets/Styles/CursorTracker';
 
 import PlayerDetails from './components/Games/CatchGame/PlayerDetails.js';
@@ -21,6 +23,8 @@ function App() {
         <Route exact path="/Checkout" element={<Checkout />} />
         <Route exact path="/OfferingsOther" element={<OfferingsOther />} />
         <Route exact path="/OfferingsMangoes" element={<OfferingsMangoes />} />
+        <Route exact path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route exact path="/TermsOfService" element={<TermsOfService />} />
 
         <Route path="/PlayerDetails" element={<PlayerDetails />} />
         <Route path="/CatchGame" element={<CatchGame />} />
