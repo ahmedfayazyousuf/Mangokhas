@@ -39,7 +39,7 @@ const PrivacyPolicy = () => {
                     <p>We may update our privacy policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
 
                     <h2 style={{ color: '#d3d3d3' }}>Contact Us</h2>
-                    <p>If you have any questions about this privacy policy, please contact us at [Your Contact Information].</p>
+                    <p>If you have any questions about this privacy policy, please contact us at <a style={{color: '#d49400'}} href='mailto:mangokhas@gmail.com'>mangokhas@gmail.com</a></p>
                 </div>
             </div>
         </>

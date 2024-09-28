@@ -20,16 +20,16 @@ const TermsOfService = () => {
                     <p>You are responsible for your use of the website and must comply with all applicable laws and regulations.</p>
 
                     <h2 style={{ color: '#d3d3d3' }}>Intellectual Property</h2>
-                    <p>All content on our website, including text, graphics, logos, and images, is the property of [Your Website Name] and is protected by copyright laws.</p>
+                    <p>All content on our website, including text, graphics, logos, and images, is the property of <a style={{color: '#d49400'}} href='https://www.mangokhas.com/'>www.mangokhas.com</a> and is protected by copyright laws.</p>
 
                     <h2 style={{ color: '#d3d3d3' }}>Limitation of Liability</h2>
-                    <p>[Your Website Name] is not liable for any damages arising from your use of the site.</p>
+                    <p><a style={{color: '#d49400'}} href='https://www.mangokhas.com/'>www.mangokhas.com</a> is not liable for any damages arising from your use of the site.</p>
 
                     <h2 style={{ color: '#d3d3d3' }}>Changes to These Terms</h2>
                     <p>We may update these Terms from time to time. Changes will be posted on this page.</p>
 
                     <h2 style={{ color: '#d3d3d3' }}>Contact Us</h2>
-                    <p>If you have any questions about these Terms, please contact us at [Your Contact Information].</p>
+                    <p>If you have any questions about these Terms, please contact us at <a style={{color: '#d49400'}} href='mailto:mangokhas@gmail.com'>mangokhas@gmail.com</a></p>
                 </div>
             </div>
         </>
