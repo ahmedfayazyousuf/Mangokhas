@@ -25,18 +25,36 @@ const Checkout = () => {
     useEffect(() => {
         const loadGoogleApi = () => {
             gapi.load('client:auth2', () => {
-                gapi.client.init({
+                gapi.auth2.init({
                     apiKey: API_KEY,
                     clientId: CLIENT_ID,
                     discoveryDocs: DISCOVERY_DOCS,
                     scope: SCOPES
                 }).then(() => {
                     console.log('Google API client initialized');
+                    // Ensure user is signed in
+                    const GoogleAuth = gapi.auth2.getAuthInstance();
+                    GoogleAuth.isSignedIn.listen(updateSigninStatus);
+                    updateSigninStatus(GoogleAuth.isSignedIn.get());
                 }).catch(error => {
                     console.error('Error loading Google API client:', error);
                 });
             });
         };
+        
+        const updateSigninStatus = (isSignedIn) => {
+            if (isSignedIn) {
+                console.log("User is signed in");
+            } else {
+                const GoogleAuth = gapi.auth2.getAuthInstance();
+                GoogleAuth.signIn().then(() => {
+                    console.log("User signed in");
+                }).catch(error => {
+                    console.error('Error signing in:', error);
+                });
+            }
+        };
+        
 
         // Load the Google Identity Services library
         const script = document.createElement('script');
@@ -201,7 +219,7 @@ const Checkout = () => {
             return total;
         }, 0);
     };
-    
+
     return (
       <>
           <Navbar />
