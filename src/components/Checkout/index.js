@@ -8,6 +8,7 @@ import MangoBoxSindhri from '../1_MediaAssets/SectionImages/AcharTypes/MangoSind
 import MangoBoxChaunsa from '../1_MediaAssets/SectionImages/AcharTypes/MangoChaunsa.jpeg';
 import AcharVeg from '../1_MediaAssets/SectionImages/AcharTypes/MixVegetableAcharNew.jpg';
 import HariChutney from '../1_MediaAssets/SectionImages/AcharTypes/HariChutneyNew.jpg';
+import { gapi } from 'gapi-script'; // Import the gapi-script library
 
 const Checkout = () => {
     const [cart, setCart] = useState({});
@@ -21,24 +22,34 @@ const Checkout = () => {
     const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
     // Load Google API client and initialize it
-    const loadGoogleApi = () => {
-        window.gapi.load("client:auth2", () => {
-            window.gapi.client.init({
-                apiKey: API_KEY,
-                clientId: CLIENT_ID,
-                discoveryDocs: DISCOVERY_DOCS,
-                scope: SCOPES
-            }).then(() => {
-                console.log('Google API client initialized');
-            }).catch(error => {
-                console.error('Error loading Google API client:', error);
-            });
-        });
-    };
-
     useEffect(() => {
-        loadGoogleApi();
-    }, []);
+        const loadGoogleApi = () => {
+            gapi.load('client:auth2', () => {
+                gapi.client.init({
+                    apiKey: API_KEY,
+                    clientId: CLIENT_ID,
+                    discoveryDocs: DISCOVERY_DOCS,
+                    scope: SCOPES
+                }).then(() => {
+                    console.log('Google API client initialized');
+                }).catch(error => {
+                    console.error('Error loading Google API client:', error);
+                });
+            });
+        };
+
+        // Load the Google Identity Services library
+        const script = document.createElement('script');
+        script.src = 'https://accounts.google.com/gsi/client';
+        script.async = true;
+        script.onload = loadGoogleApi;
+        document.body.appendChild(script);
+        
+        // Cleanup on component unmount
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []); // No need for the second useEffect
 
     // Function to append order data to Google Sheets
     const appendDataToSheet = (data) => {
@@ -185,12 +196,12 @@ const Checkout = () => {
             const [productId, weight] = key.split('-');
             const item = items.find(item => item.id === productId);
             if (item) {
-                return total + (cart[key] * item.prices[weight]);
+                return total + (item.prices[weight] * cart[key]);
             }
             return total;
         }, 0);
     };
-
+    
     return (
       <>
           <Navbar />
