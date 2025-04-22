@@ -6,8 +6,8 @@ import emailjs from 'emailjs-com';
 import Cover from '../1_MediaAssets/SectionImages/MangoTexture.png';
 import MangoBoxSindhri from '../1_MediaAssets/SectionImages/AcharTypes/MangoSindhri.jpg';
 import MangoBoxChaunsa from '../1_MediaAssets/SectionImages/AcharTypes/MangoChaunsa.jpeg';
-import AcharVeg from '../1_MediaAssets/SectionImages/AcharTypes/MixVegetableAcharNew.jpg';
-import HariChutney from '../1_MediaAssets/SectionImages/AcharTypes/HariChutneyNew.jpg';
+import AcharVeg from '../1_MediaAssets/SectionImages/AcharTypes/MixVegetableAcharNew-2.jpeg';
+import HariChutney from '../1_MediaAssets/SectionImages/AcharTypes/HariChutneyNew-2.jpeg';
 import { gapi } from 'gapi-script'; // Import the gapi-script library
 
 const Checkout = () => {
@@ -28,7 +28,7 @@ const Checkout = () => {
                 gapi.auth2.init({
                     apiKey: API_KEY,
                     clientId: CLIENT_ID,
-                    discoveryDocs: DISCOVERY_DOCS,
+                    discoveryDocs: DISCOVERY_DOCS, 
                     scope: SCOPES
                 }).then(() => {
                     console.log('Google API client initialized');
